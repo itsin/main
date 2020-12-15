@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://kit.fontawesome.com/0528990ec4.js" crossorigin="anonymous"></script>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+        .center {width: 980px; margin: auto; position: relative;}
+        .blind {position: absolute; left: -9999; font-size: 0;}
+        button {background: none; border: none;}
+        bady {background: #fdfcf0;}
+        
+        #top-banner {background: #000;}
+        #top-banner img {display: block;}
+        #top-banner button {font-size: 1.5em; position: absolute; top: 5px; right: 0px; color: #fff;}
+        
+        header {background: url(images/bg_header.gif) repeat-x;}
+        .snb {position: absolute; top: 0; right: 0;}
+        .snb a::before {content""; display: inline-block; width: 1px; height: 10px; background: #ddd; position: relative; margin-right: 5px;}
+        .snb a:first-child::before {background: none;}
+        .gnb {height: 200px;}
+        .gnb h1 {padding-top: 60px;}
+        .gnb h2 {position: absolute; top: 58px; left: 50%; transform:  translateX(-50%);}
+        .gnb nav {position: absolute; top: 93px; left: 50%; transform:  translateX(-50%);}
+        .gnb nav ul li {display: inline-block; margin: 0 15px;}
+        .gnb nav ul li a {color: #000; font-weight: bold; font-size: 18px;}
+        form {position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);}
+        form input {width: 300px; height: 30px; border: 1px solid #cacaca; border-right: 0; float: left; padding: 0 10px;}
+        form button {width: 50px; height: 30px; background: #f00; color: #fff; font-weight: bold;}
+        
+        .main-ad {background: url(images/bg_c_bricks.png) repeat-x;}
+        .main-ad ol {position: absolute; left: 50%; transform: translateX(-50%); bottom: 20px;}
+        .main-ad ol li {float: left; padding: 0 5px;}
+        .main-ad ol li a {width: 15px; height: 15px; border-radius: 50%; background: #707070; display: block;}
+        .main-ad ol li a.on {background: none; border: 3px solid #f00;}
+        
+        article h2 {background: url(images/bg_h3_line.jpg) repeat-x center; text-align: center;}
+        article h2 img {padding: 25px 15px; background: #fafcf0;}
+        .movie_selection ul {overflow: hidden;}
+        .movie_selection ul li:nth-child(1) {float: left;}
+        .movie_selection ul li:nth-child(2) {float: right;}
+        .event ul li {display: inline-block;}
+        
+        footer {background: url(images/bg_footer_com.gif) repeat-x bottom; padding-bottom: 150px; margin-top; 50px; border-top: 1px solid #949494;}
+        footer ul {overflow: hidden; margin: 20px 0;}
+        footer ul li {float: left; padding: 0 10px; background: url(images/bg_v_line.gif) right center no-repeat;}
+        footer ul li:last-child {background: none;}
+        footer ul li a {color: #444; font-size: 14px;}
+        footer .box {position: relative;}
+        footer .box h2 {position: absolute; width: 90px; height: 45px; background: url(images/sprite.png) no-repeat -145px -318px;}
+        footer .box address {font-style: normal; font-size: 12px; margin-left: 100px;}
+        footer .box small {position: absolute; right: 0; bottom: 0; color: #a7a7a7;}
+        
+    </style>
+    </head>
+<body>
+    <aside id="top-banner">
+       <div class="center">
+          <a href="#">
+            <img src="images/top_banner.jpg" alt="top_banner">
+          </a>
+          <button>
+            <i class="fas fa-times"></i>
+              <span class="blind">배너닫기</span>
+          </button>
+       </div>
+    </aside>
+    
+    <header>
+       <div class="center">
+          <div class="snb">
+             <a href="#">로그인</a>
+             <a href="#">회원가입</a>
+          </div>
+          <div class="gnb">
+             <h1>
+                <img src="images/cgv.png" alt="cgv">
+             </h1>
+             <h2>
+                <img src="images/cultureplex.png" alt="cultureplex">
+             </h2>
+             <nav>
+                <ul>
+                <li><a href="#">영화</a></li> 
+                <li><a href="#">예매</a></li> 
+                <li><a href="#">극장</a></li> 
+                <li><a href="#">이벤트&컬처</a></li> 
+                </ul>
+             </nav>
+          </div>
+          <form action="#">
+            <label for="search" class="blind">영화검색</label>
+            <input type="text" placeholder="영화제목을 검색하세요.">
+            <button type="submit">검색</button>
+          </form>
+     </div>
+   </header>
+    
+   <section>
+    <article class="main-ad">
+        <div class="center">
+           <a href="#">
+           <img src="images/slide1.jpg" alt="이미지">
+           </a>
+        <ol>
+           <li><a href="#" class="on"><span class="blind">1</span></a></li>
+           <li><a href="#"><span class="blind">2</span></a></li>
+           <li><a href="#"><span class="blind">3</span></a></li>
+       </ol>
+       </div>
+    </article>
+    <article class="movie_selection center">
+        <h2>
+           <img src="images/h3_movie_selection.gif">
+        </h2>
+        <ul>
+           <li>
+             <iframe width="730" height="388" src="https://www.youtube.com/embed/QpMDOX-1lBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </li>
+        <li>
+            <a href="#">
+            <img src="images/banner5.jpg" alt="코코이미지">
+            </a>    
+        </li>
+        </ul>
+    </article>
+    <article class="event center">
+       <h2>
+          <img src="images/h3_event.gif" alt="event"> 
+       </h2>
+       <ul>
+          <li>
+             <a href="#">
+                <img src="images/banner1.jpg" alt="banner1"> 
+             </a> 
+          </li>   
+          <li>
+             <a href="#">
+                <img src="images/banner2.jpg" alt="banner2"> 
+             </a> 
+          </li>   
+          <li>
+             <a href="#">
+                <img src="images/banner3.jpg" alt="banner3"> 
+             </a> 
+          </li>
+          <li>
+             <a href="#">
+                <img src="images/banner4.jpg" alt="banner4"> 
+             </a> 
+          </li>    
+       </ul>
+    </article>
+   </section>
+    
+    <footer>
+       <div class="center">
+          <ul>
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">IR</a></li>
+              <li><a href="#">채용정보</a></li>
+              <li><a href="#">광고문의</a></li>
+              <li><a href="#">이용약관</a></li>
+        </ul>
+        <div class="box">
+           <h2>
+              <span class="blind">cgv</span> 
+           </h2>
+           <address>
+            (04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)<br>
+대표이사 : 최병환사업자등록번호 : 104-81-45690통신판매업신고번호 : 2017-서울용산-0662<br>
+개인정보보호 책임자 : 정종민대표이메일 : cjcgvmaster@cj.netCGV고객센터 : 1544-1122
+            </address>
+            <small>© CJ CGV. All Rights Reserved</small>
+           </div>
+     </div>
+    </footer>
+    
+    </body>
+</html>
